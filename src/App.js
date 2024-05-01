@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import "./AddNote.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
       const [notes, setNotes] = useState([]);
@@ -35,10 +35,10 @@ function App() {
   const getAddNote = () => {
     return (
       <div className="form">
-         <label className="titer1">Your task title</label><br/>
-           <input type="text" className="firstInput" name="title" placeholder="Tital for tast ..." onChange={changeTilte}></input><br/>
-           <label className="titer2">text for task </label><br/>
-           <textarea type="text" rows="10" name="content" className="firstTextarea" placeholder="Description for your task ..." onChange={changeContent}></textarea><br/>
+         <label className="mb-3">Your task title</label><br/>
+           <input type="text" className="form-control" name="title" placeholder="Tital for tast ..." onChange={changeTilte}></input><br/>
+           <label className="mb-3">text for task </label><br/>
+           <textarea type="text" rows="10" name="content" className="form-control" placeholder="Description for your task ..." onChange={changeContent}></textarea><br/>
            <input type="submit" className="btnSave"  value="Save" onClick={testing}/>
       </div>
       
@@ -91,10 +91,10 @@ if(editing){
       <h2>edit your task</h2>
       <form>
       <div className="form">
-         <label className="titer1">Your task title</label><br/>
-           <input type="text" className="firstInput" name="title" placeholder="Tital for tast ..." onChange={changeTilte}></input><br/>
-           <label className="titer2">text for task </label><br/>
-           <textarea type="text" rows="10" name="content" className="firstTextarea" placeholder="Description for your task ..." onChange={changeContent}></textarea><br/>
+         <label className="mb-3">Your task title</label><br/>
+           <input type="text" className="form-control" name="title" placeholder="Tital for tast ..." onChange={changeTilte}></input><br/>
+           <label className="mb-3">text for task </label><br/>
+           <textarea type="text" rows="10" name="content" className="form-control" placeholder="Description for your task ..." onChange={changeContent}></textarea><br/>
            <input type="submit" className="btnSave"  value="save edit" onClick={updateEdting}/>
       </div>
       </form>
